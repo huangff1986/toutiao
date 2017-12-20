@@ -1,1 +1,108 @@
-UserInfo.css
+.index_header__UserInfo {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:2000;
+  background-color: #eee;
+  overflow: auto;
+
+  .UserInfo__header {
+    height: 80px;
+    position: relative;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+
+    .common_goback {
+      position: absolute;
+      top:15px;
+      left:30px;
+    }
+
+    .UserInfo__title {
+      line-height: 80px;
+      font-size: 28px;
+    }
+  }
+
+  .UserInfo__login {
+    background-color: #444;
+    height:300px;
+
+    .login__main{
+      position: relative;
+      width:65%;
+      margin:0 auto;
+
+      .login__list{
+        height:200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+
+        .login__item{
+          display: flex;
+          align-items: center;
+          justify-content:center;
+          width:130px;
+          height: 130px;
+          background-color: #fff;
+          border-radius: 999999px;
+          svg{
+            width:70px;
+            height:70px;
+          }
+        }
+      }
+
+      .login__arrow {
+        position: absolute;
+        width:40px;
+        height:40px;
+        top:80px;
+        right:-80px;
+      }
+    }
+
+    .login__readtime{
+      display: flex;
+      align-items: center;
+      justify-content:space-around;
+      width:240px;
+      height:50px;
+      margin:0 auto;
+      padding: 0 10px;
+      color: #fff;
+      border-radius: 30px;
+      background-color: #333;
+      
+      .icon {
+        width:30px;
+        height:30px;
+        border-radius: 9999px;
+        background-color: #ff9000;
+      }
+    }
+  }
+}
+
+.animation-enter {
+  transform: translate3d(0,100%,0);
+}
+
+.animation-enter.animation-enter-active {
+  transform: translate3d(0,0,0);
+  transition: transform 300ms ease-out;
+}
+
+.animation-leave {
+  transform: translate3d(0,0,0);
+}
+
+.animation-leave.animation-leave-active {
+  transform: translate3d(0,100%,0);
+  transition: transform 300ms ease-out;
+}

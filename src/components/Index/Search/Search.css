@@ -1,9 +1,12 @@
 .index_header__search{
 
   position: relative;
-  input {
+  span {
+    display: inline-block;
+    background-color: #fff;
     width: 620px;
     height: 60px;
+    line-height: 60px;
     background-color: none;
     border:none;
     border-radius: 10px;
