@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import Header from '../Header/Header'
 
 class Index extends Component {
   render() {
     return (
-      <h1>index</h1>
+      <div>
+        <Header/>
+      </div>
     )
   }
 }

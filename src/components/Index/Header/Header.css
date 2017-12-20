@@ -1,0 +1,13 @@
+.index_header {
+  height:80px;
+  background-color: #d43d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .index_header__user{
+
+  }
+  .index_header_search{
+
+  }
+}
