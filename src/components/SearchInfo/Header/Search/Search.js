@@ -1,0 +1,42 @@
+import React, {Component} from 'react'
+
+class Search extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      value: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClear  = this.handleClear.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value})
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  handleClear(event) {
+    this.setState({value: ''})
+  }
+
+  render() {
+    return (
+      <form className='SearchInfo__Search' onSubmit={this.handleSubmit}>
+        <svg className='search__find' viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2802"><defs><style type="text/css"></style></defs><path d="M823.396848 783.574626l-163.47798-163.696485c-1.042101-1.042101-2.160485-1.95103-3.316364-2.787556 35.847758-44.414707 57.329778-100.932525 57.329778-162.483717 0-142.884202-115.695192-258.728081-258.386747-258.728081C312.848808 195.878788 197.171717 311.721374 197.171717 454.605576c0 142.888081 115.677091 258.720323 258.371232 258.720323 61.896404 0 118.703838-21.805253 163.201293-58.150788 0.817131 1.122263 1.700202 2.210909 2.711273 3.223273l163.465051 163.684848c10.626586 10.639515 27.853576 10.639515 38.476283 0C834.010505 811.455354 834.010505 794.214141 823.396848 783.574626zM224.495192 454.605576c0-127.782788 103.442101-231.364525 231.049051-231.364525 127.604364 0 231.049051 103.581737 231.049051 231.364525 0 127.785374-103.444687 231.364525-231.049051 231.364525C327.937293 685.971394 224.495192 582.390949 224.495192 454.605576z" p-id="2803" fill="#8a8a8a"></path></svg>
+        {
+          this.state.value 
+          ? <svg className='search__close' onTouchStart={this.handleClear} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3664"><defs><style type="text/css"></style></defs><path d="M512 33.129412C246.964706 33.129412 33.129412 246.964706 33.129412 512S246.964706 990.870588 512 990.870588 990.870588 777.035294 990.870588 512 777.035294 33.129412 512 33.129412z m183.717647 605.364706c9.035294 9.035294 9.035294 21.082353 0 27.105882l-27.105882 27.105882c-9.035294 9.035294-21.082353 9.035294-27.105883 0l-126.494117-126.494117-126.494118 126.494117c-9.035294 9.035294-21.082353 9.035294-27.105882 0l-27.105883-27.105882c-9.035294-9.035294-9.035294-21.082353 0-27.105882l126.494118-126.494118-126.494118-126.494118c-9.035294-9.035294-9.035294-21.082353 0-27.105882l27.105883-27.105882c9.035294-9.035294 21.082353-9.035294 27.105882 0l126.494118 126.494117 126.494117-126.494117c9.035294-9.035294 21.082353-9.035294 27.105883 0l27.105882 27.105882c9.035294 9.035294 9.035294 21.082353 0 27.105882L569.223529 512l126.494118 126.494118z" p-id="3665" fill="#8a8a8a"></path></svg>
+          : null
+        }
+        <input className='search__input' type='text' value={this.state.value} onChange={this.handleChange} placeHolder='搜你想搜的' />
+        <input className={ this.state.value ? 'search__button active' : 'search__button' } type='submit' value='搜索'/>
+      </form>
+    )
+  }
+}
+
+export default Search;

@@ -3,7 +3,6 @@ import './GoBack.css'
 
 class GoBack extends Component {
   handleBack(){
-
     window.history.back()
     console.log(window.history.state)
   }
