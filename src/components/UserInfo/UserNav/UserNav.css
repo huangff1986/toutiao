@@ -1,0 +1,40 @@
+.index_header__UserInfo .UserInfo__UserNav{
+  .UserNav__UserList{
+    margin-top:24px;
+    padding-left: 30px;
+    border-top: 1PX solid #e6e6e6; 
+    border-bottom: 1PX solid #e6e6e6;
+    background-color: #f9f9f9;
+    
+    .UserNav__item{
+      position: relative;
+      height:100px;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 100px;
+      border-bottom: 1PX solid #e6e6e6;
+      &:last-child {
+        border:none;
+      }
+  
+      .UserNav__title {
+        float: left;
+      }
+  
+      .UserNav__content {
+        float: right;
+        margin-right: 70px;
+        font-size: 28px;
+        color: #aaa;
+      }
+  
+      .UserNav__arrow {
+        position: absolute;
+        right:20px;
+        top:30px;
+        width:40px;
+        height:40px;
+      }
+    }
+  }
+}

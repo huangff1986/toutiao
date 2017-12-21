@@ -1,0 +1,13 @@
+.index_header__UserInfo{
+  .index_header__Other{
+    height:120px;
+    border-bottom:1PX solid #e6e6e6;
+    background-color: #f9f9f9;
+    .other__list{
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
