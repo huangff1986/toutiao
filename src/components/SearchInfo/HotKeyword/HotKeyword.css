@@ -1,0 +1,18 @@
+.index_header__SearchInfo .HotKeyword {
+  height: 80px;
+  border-bottom: 1PX solid #e6e6e6;
+  background-color: #fff;
+  .HotKeyword__items {
+    display: inline-block;
+    box-sizing: border-box;
+    width:33.33%;
+    height: 100%;
+    font-size: 29px;
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .HotKeyword__items + .HotKeyword__items {
+    border-left: 1PX solid #e6e6e6;
+  }
+}

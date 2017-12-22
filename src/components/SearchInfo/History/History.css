@@ -1,0 +1,73 @@
+.index_header__SearchInfo .History{
+  margin-top:16px;
+  .History__HD{
+    position: relative;
+    border-top: 1PX solid #e6e6e6;
+    border-bottom: 1PX solid #e6e6e6;
+    height:80px;
+    background-color: #fff;
+    .History__title{
+      position: relative;
+      float: left;
+      margin-left:20px;
+      height: 100%;
+      .name{
+        font-size: 29px;
+        height:80px;
+        line-height: 80px;
+      }
+
+      .arrow {
+        position: absolute;
+        top:20px;
+        width:40px;
+        height:40px;
+        line-height: 80px;
+        &.active{
+          transform:rotate(180deg);
+        }
+      }
+    }
+    .History__del{
+      position: absolute;
+      top:20px;
+      right: 20px;
+      width:40px;
+      height:40px;
+    }
+    .History__del--done{
+      float: right;
+      margin-right: 20px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 29px;
+    }
+  }
+  .History__BD{
+    background-color: #fff;
+    .History__list{
+      .History__item{
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 80px;
+        width:50%;
+        border-bottom:1PX solid #e6e6e6;
+        line-height: 80px;
+        font-size: 29px;
+        text-indent: 20px;
+        &:nth-child(odd){
+          border-right:1PX solid #e6e6e6;
+        }
+        .btn_del{
+          position: absolute;
+          right:20px;
+          top:25px;
+          width:30px;
+          height:30px; 
+          fill: #ccc;
+        }
+      }
+    }
+  }
+}

@@ -32,7 +32,7 @@ class Search extends Component {
           ? <svg className='search__close' onTouchStart={this.handleClear} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3664"><defs><style type="text/css"></style></defs><path d="M512 33.129412C246.964706 33.129412 33.129412 246.964706 33.129412 512S246.964706 990.870588 512 990.870588 990.870588 777.035294 990.870588 512 777.035294 33.129412 512 33.129412z m183.717647 605.364706c9.035294 9.035294 9.035294 21.082353 0 27.105882l-27.105882 27.105882c-9.035294 9.035294-21.082353 9.035294-27.105883 0l-126.494117-126.494117-126.494118 126.494117c-9.035294 9.035294-21.082353 9.035294-27.105882 0l-27.105883-27.105882c-9.035294-9.035294-9.035294-21.082353 0-27.105882l126.494118-126.494118-126.494118-126.494118c-9.035294-9.035294-9.035294-21.082353 0-27.105882l27.105883-27.105882c9.035294-9.035294 21.082353-9.035294 27.105882 0l126.494118 126.494117 126.494117-126.494117c9.035294-9.035294 21.082353-9.035294 27.105883 0l27.105882 27.105882c9.035294 9.035294 9.035294 21.082353 0 27.105882L569.223529 512l126.494118 126.494118z" p-id="3665" fill="#8a8a8a"></path></svg>
           : null
         }
-        <input className='search__input' type='text' value={this.state.value} onChange={this.handleChange} placeHolder='搜你想搜的' />
+        <input className='search__input' type='text' value={this.state.value} onChange={this.handleChange} placeholder='搜你想搜的' />
         <input className={ this.state.value ? 'search__button active' : 'search__button' } type='submit' value='搜索'/>
       </form>
     )

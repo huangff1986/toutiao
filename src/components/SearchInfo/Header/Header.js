@@ -3,7 +3,8 @@ import Search from './Search/Search'
 import './Header.css'
 
 class Header extends Component {
-  goback() {
+  goback(event) {
+    event.stopPropagation()
     window.history.back()
   }
   render() {

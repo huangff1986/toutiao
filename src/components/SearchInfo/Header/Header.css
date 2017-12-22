@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   height:80px;
-  border:1PX solid #e6e6e6;
+  border-bottom:1PX solid #e6e6e6;
   background-color: #fff;
   
   .SearchInfo__goback{
@@ -44,6 +44,7 @@
     .search__button{
       background: none;
       border:none;
+      color: #8a8a8a;
       font-size: 30px;
       margin-left:24px;
 
