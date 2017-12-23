@@ -1,0 +1,46 @@
+.index_header__SearchInfo .Guess .ShowMain{
+  .Guess__HD{
+    padding-top: 16px;
+    height:80px;
+    border-bottom: 1PX solid #e6e6e6;
+    border-top: 16px solid #eee;
+    background-color: #fff;
+    .title{
+      display: inline-block;
+      height:80px;
+      line-height: 80px;
+      font-size: 29px;
+      text-indent: 20px;
+    }
+
+    .recommend{
+      float: right;
+      width:80px;
+      height:80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .recommend_icon{
+        width:40px;
+        height:40px;
+      }
+    }
+  }
+  .Guess__BD{
+    .Guess__list{
+      .Guess__item{
+        box-sizing: border-box;
+        display: inline-block;
+        height: 80px;
+        line-height: 80px;
+        width:50%;
+        border-bottom: 1PX solid #e6e6e6;
+        font-size: 29px;
+        text-indent: 20px;
+        &:nth-child(odd){
+          border-right: 1PX solid #e6e6e6;
+        }
+      }
+    }
+  }
+}

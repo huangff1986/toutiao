@@ -1,5 +1,6 @@
 .index_header__SearchInfo .History{
-  margin-top:16px;
+  padding-top:16px;
+  background-color: #eee;
   .History__HD{
     position: relative;
     border-top: 1PX solid #e6e6e6;
