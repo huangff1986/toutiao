@@ -66,7 +66,15 @@ class SliderContainer extends Component {
   render(){
     return (
       <div className='warpper'>
-        <Slider data={this.state.data}/>
+        <Slider 
+          data={this.state.data} 
+          openState={{
+            openSliderPop: this.props.openState.openSliderPop
+          }}
+          handleTouch={{
+            openSliderPop: this.props.handleTouch.openSliderPop
+          }}
+        />
       </div>
     )
   }
