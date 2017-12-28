@@ -35,7 +35,7 @@ class Slider extends Component{
         </div>
           {
             this.props.openState.openSliderPop
-            ? <SliderPop data={this.props.data}/>
+            ? <SliderPop data={this.props.data} addChannel={this.props.addChannel} removeChannel={this.props.removeChannel}/>
             : null
           }
       </ReactCSSTransitionGroup>

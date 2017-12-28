@@ -1,0 +1,64 @@
+.sliderPop .MyChannel {
+  .header{
+    padding: 0 24px;
+    height:80px;
+    .title{
+      float: left;
+      height:80px;
+      line-height: 80px;
+      .maintitle{
+        font-size: 29px;  
+        margin-right:16px;      
+      }
+      .subtitle{
+        font-size: 24px;
+        color: #8a8a8a;
+      }
+    }
+    .edit{
+      float: right;
+      height:80px;
+      line-height: 80px;
+      .edit__btn{
+        height:40px;
+        line-height: 40px;
+        width:100px;
+        text-align: center;
+
+        border-radius: 25px;
+        display: inline-block;
+        border: 1PX solid red;
+        font-size: 26px;
+        color:red;
+      }
+    }
+  }
+  .main{
+    .channelList{
+      padding-left: 24px;
+      overflow: hidden;
+      padding-top:10px;
+      .channelItem{
+        position: relative;
+        float: left;
+        height:70px;
+        line-height: 70px;
+        margin: 0 24px 24px 0;
+        width: 157px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #f6f6f6;
+        &.static{
+          color:#8a8a8a;
+        }
+        .delBtn{
+          position: absolute;
+          top:-10px;
+          right: -10px;
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}

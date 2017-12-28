@@ -2,6 +2,7 @@
   position: relative;
   height:70px;
   border-bottom:1PX solid #e6e6e6;
+  z-index:1000;
   .slider__warpper{
     height: 100%;
     overflow: auto;
