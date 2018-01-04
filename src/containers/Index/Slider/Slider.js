@@ -42,8 +42,8 @@ class SliderContainer extends Component {
           handleTouch={{
             openSliderPop: this.props.handleTouch.openSliderPop
           }}
-          addChannel={this.addChannel.bind(this)}
-          removeChannel={this.removeChannel.bind(this)}
+          addChannel={this.props.addChannel}
+          removeChannel={this.props.removeChannel}
         />
       </div>
     )

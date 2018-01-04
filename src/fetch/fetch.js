@@ -11,7 +11,7 @@ let config = {
       return ret
     }
   ],
-  transfroomResponse: [
+  transfromResponse: [
     function(data) {
       return data
     }

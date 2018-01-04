@@ -5,13 +5,9 @@ import {actionTypes as globalActionType} from '../reducers/globalStateReducer'
 
 export function* getAllTags() {
   yield put({type: globalActionType.FETCH_START})
-  
-    console.log('getAllTags err')
   try {
-    return yield call(get, '/getAllTags')
-    console.log('getAllTags err')
+    return yield call(get, '/tag')
   } catch (err) {
-    console.log('getAllTags err')
     yield put({type: globalActionType.SET_MESSAGE, msgContent: '网络请求错误', msgType:0})
   } finally {
     yield put({type: globalActionType.FETCH_END})
@@ -25,7 +21,6 @@ export function* getAllTagsFlow() {
     // 通过call执行 jieleruite 函数
     // res 就是getAllTags获取到的数据
     let res = yield call(getAllTags)
-    console.log(res);
     if (res.code === 0) {
       let tempArr = [];
       for (let i =0; i < res.data.length; i++) {
@@ -36,4 +31,29 @@ export function* getAllTagsFlow() {
         yield put({type: globalActionType.SET_MESSAGE, msgContent: res.message, msgType: 1});
     }
   }
+}
+
+
+export function* addTag(title){
+  yield put({type: globalActionType.FETCH_START});
+  try {
+    return yield call(post, '/addTag', {title})
+  } catch (err) {
+    yield put({type: globalActionType.SET_MESSAGE, msgContent: '网络请求错误', msgType: 0});
+  } finally {
+    yield put({type: globalActionType.FETCH_END})
+  }
+}
+
+export function* addTagFlow() {
+  while(true) {
+    let action = yield take(ManagerTagsTypes.ADD_TAG);
+    let res = yield call(addTag, action.title);
+    if (res.code === 0) {
+    }
+  }
+}
+
+export function* changeTagActive(title) {
+
 }

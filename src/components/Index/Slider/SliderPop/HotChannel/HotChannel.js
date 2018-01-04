@@ -21,7 +21,11 @@ class HotChannel extends Component{
               this.props.data.map((value, index)=> {
                 if(!value.active){
                   return (
-                    <li className='channelItem' onTouchStart={this.props.addChannel} key={index} data-key={index}>
+                    <li 
+                      className='channelItem' 
+                      onTouchStart={this.props.addChannel(value.title)} 
+                      key={index} 
+                    >
                       +{value.title}
                     </li>
                   )

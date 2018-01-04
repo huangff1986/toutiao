@@ -9,6 +9,7 @@ const app = new Express();
 const port = 3001;
 
 // bodyParser的处理
+// 请求是通过 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 

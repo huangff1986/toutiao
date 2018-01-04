@@ -44,7 +44,11 @@ class MyChannel extends Component{
               this.props.data.map((value, index) => {
                 if(value.active){
                   return (
-                    <li className={!value.static ? 'channelItem' : 'channelItem static'} onTouchStart = { this.state.editMode ? this.props.removeChannel : null} key={index} data-key={index}>
+                    <li 
+                      className={!value.static ? 'channelItem' : 'channelItem static'} 
+                      onTouchStart = { this.state.editMode ? this.props.removeChannel(value.title) : null} 
+                      key={index}
+                    >
                       {value.title}
                       {
                         this.state.editMode && !value.static
